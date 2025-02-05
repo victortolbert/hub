@@ -142,10 +142,10 @@ export default defineNuxtConfig({
   },
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
-  hub: {
-    ai: true,
-    blob: true,
-  },
+  // hub: {
+  //   ai: true,
+  //   blob: true,
+  // },
 
   vite: {
     define: {
