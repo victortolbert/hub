@@ -12,21 +12,21 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@iconify-json/heroicons": "^1.2.1",
-    "@kgierke/nuxt-basic-auth": "^1.6.0",
-    "@nuxt/eslint": "^0.6.0",
-    "@nuxt/ui": "^2.18.7",
-    "@nuxthub/core": "^0.7.31",
-    "nuxt": "^3.13.2",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5",
-    "zod": "^3.23.8"
+    "@iconify-json/heroicons": "^1.2.2",
+    "@kgierke/nuxt-basic-auth": "^1.7.0",
+    "@nuxt/eslint": "^1.0.0",
+    "@nuxt/ui": "^2.21.0",
+    "@nuxthub/core": "^0.8.16",
+    "nuxt": "^3.15.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.6.0",
-    "eslint": "^9.12.0",
-    "vue-tsc": "^2.1.6",
-    "wrangler": "^3.80.4"
+    "@nuxt/eslint-config": "^1.0.0",
+    "eslint": "^9.19.0",
+    "vue-tsc": "^2.2.0",
+    "wrangler": "^3.107.3"
   },
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@10.2.0"
 }
