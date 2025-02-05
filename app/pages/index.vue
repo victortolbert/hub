@@ -5,6 +5,7 @@ const steps = ref(4)
 const src = ref('')
 const loading = ref(false)
 const style = ref('none')
+
 async function generateImage() {
   if (loading.value || !prompt.value) return
   loading.value = true
@@ -32,6 +33,7 @@ async function generateImage() {
     <h1 class="text-3xl font-bold">
       Flux-1 Schell Image Generator
     </h1>
+
     <form class="w-full" @submit.prevent="generateImage()">
       <UFormGroup label="Image prompt" class="mb-4">
         <UTextarea
@@ -41,6 +43,7 @@ async function generateImage() {
           autoresize
         />
       </UFormGroup>
+
       <UFormGroup label="Image style" class="mb-4">
         <USelect
           v-model="style"
@@ -49,6 +52,7 @@ async function generateImage() {
           block
         />
       </UFormGroup>
+
       <UFormGroup :label="`Number of steps (${steps})`" class="mb-4">
         <URange
           v-model="steps"
@@ -57,6 +61,7 @@ async function generateImage() {
           size="sm"
         />
       </UFormGroup>
+
       <UButton
         type="submit"
         color="black"
@@ -67,6 +72,7 @@ async function generateImage() {
         Generate
       </UButton>
     </form>
+
     <img v-if="src" :src="src" class="w-full max-w-[420px]">
   </div>
 </template>

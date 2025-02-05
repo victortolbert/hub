@@ -27,7 +27,7 @@ export default eventHandler(async (event) => {
 
   const blob = new Blob([Buffer.from(image, 'base64')], { type: 'image/png' })
   const pathname = `${Date.now()}.png`
-  
+
   const blobObject = await hubBlob().put(pathname, blob, {
     customMetadata: {
       prompt,
