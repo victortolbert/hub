@@ -165,6 +165,33 @@ export default defineNuxtConfig({
 
   telemetry: false,
 
+  hooks: {
+    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
+    'components:extend': (components) => {
+      const globals = components.filter(c => ['UBadge', 'UButton', 'UIcon'].includes(c.pascalName))
+
+      globals.forEach(c => c.global = true)
+    },
+
+    // 'components:dirs': function (dirs) {
+    //   dirs.push({
+    //     path: '~/app-components',
+    //     prefix: 'App',
+    //   })
+    // },
+
+    // 'components:extend': function (components) {
+    //   for (const component of components) {
+    //     if (component.global)
+    //       component.global = 'sync'
+    //   }
+    // },
+
+    'pages:extend': function (routes) {
+      console.log(JSON.stringify(routes, null, 2))
+    },
+  },
+
   basicAuth: {
     enabled: process.env.NODE_ENV === 'production',
     allowedRoutes: ['/api/_hub/'],

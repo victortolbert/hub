@@ -1,14 +1,9 @@
 // import typography from '@tailwindcss/typography'
 // import { em } from './app/utils/em.js'
 
-import defaultTheme from 'tailwindcss/defaultTheme'
-
 /** @type {import('tailwindcss').Config} */
 export default {
   theme: {
-    fontFamily: {
-      sans: ['Inter var', 'Inter', ...defaultTheme.fontFamily.sans],
-    },
     extend: {
       backgroundImage: {
         'skyrizi-derm-overview': 'url("/content/dam/skyrizihcpivy/isa/template-assets/skyrizi-derm-background-overview.jpg")',

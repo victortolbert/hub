@@ -39,7 +39,7 @@ importers:
         specifier: ^1.9.0
         version: 1.9.0(db0@0.2.3(better-sqlite3@11.8.1)(drizzle-orm@0.39.2(@cloudflare/workers-types@4.20250204.0)(@opentelemetry/api@1.9.0)(better-sqlite3@11.8.1)(react@19.0.0)))(ioredis@5.4.2)(magicast@0.3.5)(rollup@4.34.4)
       '@nuxt/ui':
-        specifier: ^3.0.0-alpha.11
+        specifier: ^3.0.0-alpha.12
         version: 3.0.0-alpha.12(@babel/parser@7.26.7)(axios@1.7.9)(change-case@5.4.4)(db0@0.2.3(better-sqlite3@11.8.1)(drizzle-orm@0.39.2(@cloudflare/workers-types@4.20250204.0)(@opentelemetry/api@1.9.0)(better-sqlite3@11.8.1)(react@19.0.0)))(embla-carousel@8.5.2)(ioredis@5.4.2)(magicast@0.3.5)(radix-vue@1.9.13(vue@3.5.13(typescript@5.7.3)))(rollup@4.34.4)(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(less@4.2.2)(lightningcss@1.29.1)(sass-embedded@1.83.4)(terser@5.38.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
       '@nuxt/ui-pro':
         specifier: 3.0.0-alpha.12
@@ -156,7 +156,7 @@ importers:
         specifier: ^0.30.4
         version: 0.30.4
       drizzle-orm:
-        specifier: ^0.39.1
+        specifier: ^0.39.2
         version: 0.39.2(@cloudflare/workers-types@4.20250204.0)(@opentelemetry/api@1.9.0)(better-sqlite3@11.8.1)(react@19.0.0)
       gravatar:
         specifier: ^1.8.2
@@ -424,7 +424,7 @@ importers:
         specifier: ^12.1.0
         version: 12.1.0(eslint-plugin-import-x@4.6.1(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       '@nuxtjs/mdc':
-        specifier: ^0.9.0
+        specifier: ^0.9.5
         version: 0.9.5(magicast@0.3.5)(rollup@4.34.4)
       '@nuxtjs/plausible':
         specifier: ^1.2.0
