@@ -31,6 +31,8 @@ export default defineNuxtConfig({
     { src: '~/plugins/jquery.client.ts', mode: 'client' },
   ],
 
+  ssr: false,
+
   // https://devtools.nuxt.com
   devtools: { enabled: true },
 
