@@ -33,6 +33,8 @@
   "nuxtr.vueFiles.style.alwaysScoped": false,
   "nuxtr.openItemsAfterCreation": true,
   "nuxtr.defaultPackageManager": "pnpm",
+  "nuxtr.vueFiles.pages.defaultTemplate": "default.page-template",
+  "nuxtr.vueFiles.layouts.defaultTemplate": "default.layout-template",
 
   "eslint.useFlatConfig": true,
   "prettier.enable": false,

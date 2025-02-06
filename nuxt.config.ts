@@ -19,16 +19,19 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
-    '@nuxtjs/mdc',
     'nuxt-auth-utils',
     '@kgierke/nuxt-basic-auth',
+    // '@nuxtjs/mdc',
     // '@nuxtjs/plausible',
     // '@vue-email/nuxt',
     // 'nuxt-mail',
   ],
 
   plugins: [
-    { src: '~/plugins/jquery.client.ts', mode: 'client' },
+    {
+      src: '~/plugins/jquery.client.ts',
+      mode: 'client',
+    },
   ],
 
   ssr: false,
@@ -119,7 +122,7 @@ export default defineNuxtConfig({
   },
 
   devServer: {
-    port: 3210,
+    port: 3211,
     cors: {
       origin: [
         'http://localhost:3210',
@@ -187,9 +190,9 @@ export default defineNuxtConfig({
     //   }
     // },
 
-    'pages:extend': function (routes) {
-      console.log(JSON.stringify(routes, null, 2))
-    },
+    // 'pages:extend': function (routes) {
+    //   console.log(JSON.stringify(routes, null, 2))
+    // },
   },
 
   basicAuth: {
