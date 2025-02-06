@@ -588,6 +588,9 @@ importers:
       sass-embedded:
         specifier: ^1.83.4
         version: 1.83.4
+      shiki:
+        specifier: ^2.3.1
+        version: 2.3.1
       shiki-transformer-color-highlight:
         specifier: ^0.2.0
         version: 0.2.0

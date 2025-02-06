@@ -22,7 +22,7 @@ await getImages()
     <div
       class="bg-black min-h-[100dvh] overflow-x-auto relative"
       :class="{
-        'flex flex-col md:block': $router.currentRoute.value.fullPath !== '/',
+        'flex flex-col md:block': $router.currentRoute.value.fullPath !== '/examples/image/gallery',
       }"
     >
       <NuxtRouteAnnouncer />
@@ -32,11 +32,11 @@ await getImages()
       <div>
         <NuxtPage />
 
-        <ImageThumbnailList
-          :class="$router.currentRoute.value.fullPath !== '/'
+        <!-- <ImageThumbnailList
+          :class="$router.currentRoute.value.fullPath !== '/examples/image/gallery'
             ? 'opacity-100 z-[9999]'
             : 'opacity-0 z-[-1]'"
-        />
+        /> -->
       </div>
     </div>
   </UApp>
