@@ -1,6 +1,6 @@
 <!--  A catch-all page to fetch contents based on route path. -->
 <script lang="ts" setup>
-const props = defineProps<{
+defineProps<{
   title?: string
 }>()
 
@@ -95,40 +95,8 @@ const items = ref([
         <ContentRenderer :value="page" />
       </section>
 
-      <section v-else class="mt-8 p-8 w-full m-auto">
-        <!-- Page not found -->
-        <BeforeAfter />
-
-        <!-- <TwentyTwenty
-          class="w-full"
-          before="//dummyimage.com/1024x768/E8117F/FFFFFF?text=Before"
-          after="//dummyimage.com/1024x768/CCCCCC/FFFFFF?text=After"
-        /> -->
-        <!-- <pre>{{ theAuthor }}</pre> -->
-        <!-- <button>
-          <UIcon name="" class="animate-bounce animate" />
-        </button> -->
-
-        <!-- [state=open]:text-[var(--ui-text-highlighted)]  -->
-        <!-- [state=open]:rotate-180  -->
-
-        <!-- <UDropdownMenu v-model:open="open" :items="menu" :ui="{ content: 'w-48' }">
-          <UButton
-            label="Open"
-            color="neutral"
-            variant="outline"
-            :trailing-icon="open ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
-            :ui="{
-              trailingIcon: '',
-            }"
-          />
-        </UDropdownMenu> -->
-
-        <!-- <div class="py-[calc(--spacing(4)-1px)]">
-          <UButton @click="enableCustomLayout">
-            Update layout
-          </UButton>
-        </div> -->
+      <section v-else class="w-full">
+        <ImageCompare />
       </section>
     </div>
   </UContainer>

@@ -20,8 +20,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
-
-    // 'nuxt-auth-utils',
+    'nuxt-auth-utils',
     // '@nuxtjs/plausible',
     // '@vue-email/nuxt',
     // 'nuxt-mail',
@@ -125,12 +124,15 @@ export default defineNuxtConfig({
       ],
     },
   },
-
   // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
   future: { compatibilityVersion: 4 },
 
   features: {
     inlineStyles: false,
+  },
+
+  experimental: {
+    viewTransition: true,
   },
 
   compatibilityDate: '2024-07-30',
@@ -142,10 +144,10 @@ export default defineNuxtConfig({
   },
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
-  // hub: {
-  //   ai: true,
-  //   blob: true,
-  // },
+  hub: {
+    ai: true,
+    blob: true,
+  },
 
   vite: {
     define: {
@@ -201,7 +203,7 @@ export default defineNuxtConfig({
     },
 
     serverBundle: {
-      collections: ['ph'],
+      collections: ['ph', 'lucide', 'heroicons', 'simple-icons'],
     },
   },
 

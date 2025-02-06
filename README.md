@@ -4,6 +4,15 @@
 
 - Generate images with Flux-1 Schell
 
+## Components
+
+| Component     |
+| ------------- |
+| Placeholder   |
+| Image Compare |
+
+----
+
 ## Setup
 
 Make sure to install the dependencies with [pnpm](https://pnpm.io/installation#using-corepack):
