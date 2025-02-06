@@ -203,7 +203,7 @@ export default defineNuxtConfig({
     },
 
     serverBundle: {
-      collections: ['ph', 'lucide', 'heroicons', 'simple-icons'],
+      collections: ['ph'],
     },
   },
 
