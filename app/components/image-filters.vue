@@ -18,7 +18,7 @@ defineEmits(['resetFilter', 'closeFilter'])
       @click="$emit('resetFilter')"
     />
     <UButton
-      icon="i-heroicons-x-mark"
+      icon="i-ph-x-duotone"
       variant="ghost"
       color="neutral"
       size="xs"

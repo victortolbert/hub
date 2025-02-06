@@ -11,7 +11,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxthub/core',
     '@nuxt/eslint',
-    '@kgierke/nuxt-basic-auth',
     '@nuxt/ui-pro',
     'nuxt-fathom',
     '@nuxt/content',
@@ -20,7 +19,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
+    '@nuxtjs/mdc',
     'nuxt-auth-utils',
+    '@kgierke/nuxt-basic-auth',
     // '@nuxtjs/plausible',
     // '@vue-email/nuxt',
     // 'nuxt-mail',
@@ -147,6 +148,8 @@ export default defineNuxtConfig({
   hub: {
     ai: true,
     blob: true,
+    cache: true,
+    // database: true,
   },
 
   vite: {
@@ -157,6 +160,8 @@ export default defineNuxtConfig({
       __TEST__: false,
     },
   },
+
+  telemetry: false,
 
   basicAuth: {
     enabled: process.env.NODE_ENV === 'production',

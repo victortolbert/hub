@@ -43,7 +43,7 @@ async function login() {
       v-model="password"
       type="password"
       placeholder="Enter password"
-      icon="i-heroicons-key"
+      icon="i-ph-key-duotone"
       class="!w-60"
     />
 
@@ -59,7 +59,7 @@ async function login() {
     />
 
     <!-- <UButton
-      icon="i-heroicons-x-mark"
+      icon="i-ph-x-duotone"
       color="neutral"
       variant="ghost"
       size="xs"

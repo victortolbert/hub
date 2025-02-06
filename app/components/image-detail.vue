@@ -134,7 +134,7 @@ onMounted(() => {
                 :ui="{ label: 'text-gray-300 dark:text-gray-300' }"
               />
               <UIcon
-                name="i-heroicons-magnifying-glass-solid"
+                name="i-ph-magnifying-glass-duotone"
                 class="w-5 h-5 text-gray-300"
               />
             </div>
@@ -215,7 +215,7 @@ onMounted(() => {
                     color="neutral"
                     to="/"
                     size="md"
-                    icon="i-heroicons-rectangle-group-20-solid"
+                    icon="i-ph-squares-four-duotone"
                     aria-label="Back to gallery"
                     class="back flex transition-colors duration-200"
                   />
@@ -227,7 +227,7 @@ onMounted(() => {
                     variant="ghost"
                     color="neutral"
                     size="md"
-                    icon="i-heroicons-paint-brush-20-solid"
+                    icon="i-ph-paint-brush-duotone"
                     aria-label="Add filters on image"
                     class="hidden lg:flex"
                     @click="filter = true"
@@ -239,7 +239,7 @@ onMounted(() => {
                   <UButton
                     variant="ghost"
                     color="neutral"
-                    icon="i-heroicons-arrow-up-right-20-solid"
+                    icon="i-ph-arrow-up-right-duotone"
                     size="md"
                     :to="`/images/${image.pathname}`"
                     target="_blank"
@@ -252,7 +252,7 @@ onMounted(() => {
                   <UButton
                     variant="ghost"
                     color="neutral"
-                    icon="i-heroicons-arrow-down-tray-20-solid"
+                    icon="i-ph-download-duotone"
                     size="md"
                     class="hidden md:flex"
                     aria-label="Download original or modified image"
@@ -273,7 +273,7 @@ onMounted(() => {
                     :loading="savingImg"
                     variant="ghost"
                     color="neutral"
-                    icon="i-heroicons-check-20-solid"
+                    icon="i-ph-check-duotone"
                     class="hidden md:flex"
                     aria-label="Upload original or modified image to gallery"
                     @click="saveImage()"
@@ -284,7 +284,7 @@ onMounted(() => {
                   <UButton
                     variant="ghost"
                     color="neutral"
-                    icon="i-heroicons-x-mark"
+                    icon="i-ph-x-duotone"
                     class="hidden md:flex"
                     aria-label="Upload original or modified image to gallery"
                     @click="cancelFilter()"
@@ -311,7 +311,7 @@ onMounted(() => {
                 color="neutral"
                 :to="`/examples/image/gallery/detail/${images![currentIndex - 1].pathname.split('.')[0]}`"
                 size="lg"
-                icon="i-heroicons-chevron-left"
+                icon="i-ph-caret-left-duotone"
                 class="hidden md:flex ml-4"
                 aria-label="Go to previous image"
                 @click="active === image.pathname.split('.')[0]"
@@ -337,7 +337,7 @@ onMounted(() => {
                   @click="active === image.pathname.split('.')[0]"
                 >
                   <UIcon
-                    name="i-heroicons-rectangle-group-20-solid"
+                    name="i-ph-squares-four-duotone"
                     class="w-6 h-6"
                   />
                 </UButton>
@@ -380,7 +380,7 @@ onMounted(() => {
                 color="neutral"
                 :to="`/examples/image/gallery/detail/${images![currentIndex + 1].pathname.split('.')[0]}`"
                 size="lg"
-                icon="i-heroicons-chevron-right"
+                icon="i-ph-caret-right-duotone"
                 class="hidden md:flex mr-4 rounded-full"
                 aria-label="Go to next image"
                 @click="active === image.pathname.split('.')[0]"
@@ -404,7 +404,7 @@ onMounted(() => {
                   @click="active === image.pathname.split('.')[0]"
                 >
                   <UIcon
-                    name="i-heroicons-rectangle-group-20-solid"
+                    name="i-ph-squares-four-duotone"
                     class="w-6 h-6"
                   />
                 </UButton>

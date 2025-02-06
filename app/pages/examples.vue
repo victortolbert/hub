@@ -12,22 +12,22 @@ const items = ref([
       children: [
         {
           label: 'Compare',
-          icon: 'i-heroicons-command-line',
+          icon: 'i-ph-terminal-window-duotone',
           to: '/examples/image/compare',
         },
         {
           label: 'Gallery',
-          icon: 'i-heroicons-command-line',
+          icon: 'i-ph-terminal-window-duotone',
           to: '/examples/image/gallery',
         },
         {
           label: 'Generator',
-          icon: 'i-heroicons-command-line',
+          icon: 'i-ph-terminal-window-duotone',
           to: '/examples/image/generator',
         },
         {
           label: 'Placeholder',
-          icon: 'i-heroicons-command-line',
+          icon: 'i-ph-terminal-window-duotone',
           to: '/examples/image/placeholder',
         },
       ],

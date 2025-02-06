@@ -39,12 +39,12 @@ const isSmallScreen = useMediaQuery('(max-width: 1024px)')
           class="w-full rounded-md flex items-center justify-center h-[430px]"
         >
           <UIcon
-            name="i-heroicons-arrow-up-tray"
+            name="i-ph-upload-duotone"
             class="group-hover:hidden h-12 w-12 m-auto absolute"
           />
           <div class="relative opacity-0 group-hover:opacity-100 flex w-full h-full justify-center items-center transition-all duration-100">
             <UIcon
-              name="i-heroicons-arrow-up-tray"
+              name="i-ph-upload-duotone"
               class="absolute m-auto h-12 w-12 transition-all duration-100 group-hover:-translate-y-5"
             />
             <span
@@ -60,7 +60,7 @@ const isSmallScreen = useMediaQuery('(max-width: 1024px)')
         >
           <div class="relative flex flex-col w-full h-full justify-center items-center ">
             <UIcon
-              name="i-heroicons-arrow-up-tray"
+              name="i-ph-upload-duotone"
               class="w-12 h-12 text-white"
             />
             <span class="text-white">Press to upload</span>
@@ -70,7 +70,7 @@ const isSmallScreen = useMediaQuery('(max-width: 1024px)')
 
       <div v-else>
         <UIcon
-          name="i-heroicons-arrow-path-20-solid"
+          name="i-ph-arrows-clockwise-duotone"
           class="animate-spin w-12 h-12 text-white"
         />
       </div>

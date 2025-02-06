@@ -59,7 +59,7 @@ async function generateImage() {
             'pixel-art',
             '3d-model',
           ]"
-          icon="i-heroicons-paint-brush"
+          icon="i-ph-paint-brush-duotone"
           class="w-full"
         />
       </UFormField>
@@ -74,6 +74,7 @@ async function generateImage() {
       </UFormField>
 
       <UButton
+        type="submit"
         color="neutral"
         variant="outline"
         :loading="loading"

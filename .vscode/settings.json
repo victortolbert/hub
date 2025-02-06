@@ -25,4 +25,15 @@
     "active-class",
     "inactive-class"
   ],
+
+  "nuxtr.vueFiles.firstTag": "script",
+  "nuxtr.vueFiles.script.type": "setup",
+  "nuxtr.vueFiles.script.defaultLanguage": "ts",
+  "nuxtr.vueFiles.style.addStyleTag": false,
+  "nuxtr.vueFiles.style.alwaysScoped": false,
+  "nuxtr.openItemsAfterCreation": true,
+  "nuxtr.defaultPackageManager": "pnpm",
+
+  "eslint.useFlatConfig": true,
+  "prettier.enable": false,
 }
