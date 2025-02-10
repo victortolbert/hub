@@ -1,19 +1,22 @@
 import process from 'node:process'
+import { createResolver } from '@nuxt/kit'
 import { execaSync } from 'execa'
 import pkg from './package.json'
 
 const commit = execaSync('git', ['rev-parse', '--short', 'HEAD'])
+
+const { resolve } = createResolver(import.meta.url)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
   // https://nuxt.com/modules
   modules: [
+    '@nuxt/ui-pro',
+    '@nuxt/content',
     '@nuxthub/core',
     '@nuxt/eslint',
-    '@nuxt/ui-pro',
     'nuxt-fathom',
-    '@nuxt/content',
     '@formkit/auto-animate/nuxt',
     '@nuxt/image',
     '@vueuse/nuxt',
@@ -21,6 +24,21 @@ export default defineNuxtConfig({
     '@pinia/colada-nuxt',
     'nuxt-auth-utils',
     '@kgierke/nuxt-basic-auth',
+    'motion-v/nuxt',
+    // 'nuxt-component-meta',
+    // 'nuxt-og-image',
+    // (_, nuxt) => {
+    //   nuxt.hook('components:dirs', (dirs) => {
+    //     dirs.unshift({
+    //       path: resolve('./app/components/content/examples'),
+    //       pathPrefix: false,
+    //       prefix: '',
+    //       global: true,
+    //     })
+    //   })
+    // },
+    // '~~/modules/llms/module',
+
     // '@nuxtjs/mdc',
     // '@nuxtjs/plausible',
     // '@vue-email/nuxt',
@@ -45,10 +63,25 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       title: 'Docs',
       titleTemplate: '%s - Docs',
+
+      // LemonSqueezy affiliate
+      // script: [{
+      //   key: 'lmsqueezy-config',
+      //   innerHTML: 'window.lemonSqueezyAffiliateConfig = { store: "nuxt" };',
+      // }, {
+      //   key: 'lmsqueezy',
+      //   src: 'https://lmsqueezy.com/affiliate.js',
+      //   defer: true,
+      // }],
+
       link: [
         { rel: 'icon', href: '/favicon.svg', sizes: 'any' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon-dark.svg' },
       ],
+    },
+    rootAttrs: {
+      'vaul-drawer-wrapper': '',
+      'class': 'bg-(--ui-bg)',
     },
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
@@ -59,6 +92,10 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     'animate.css',
   ],
+
+  // site: {
+  //   url: 'https://hub.designcoder.net',
+  // },
 
   content: {
     build: {
@@ -71,12 +108,17 @@ export default defineNuxtConfig({
           },
           langs: [
             'astro',
+            'bash',
             'blade',
             'csharp',
+            'css',
             'csv',
+            'diff',
             'handlebars',
             'http',
             'java',
+            'json',
+            'mdc',
             'mdx',
             'postcss',
             'python',
@@ -85,13 +127,22 @@ export default defineNuxtConfig({
             'ruby',
             'sql',
             'svelte',
+            'typescript',
+            'vue',
             'xml',
+            'yml',
           ],
         },
       },
     },
 
   },
+
+  // mdc: {
+  //   highlight: {
+  //     noApiRoute: false,
+  //   },
+  // },
 
   ui: {
     fonts: false,
@@ -121,16 +172,25 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    // '/': { redirect: '/guide', prerender: false },
+    // '/components': { redirect: '/components/app', prerender: false },
+    '/guide/installation': { redirect: '/guide/installation/nuxt', prerender: false },
+    '/guide/icons': { redirect: '/guide/icons/nuxt', prerender: false },
+    '/guide/color-mode': { redirect: '/guide/color-mode/nuxt', prerender: false },
+    '/composables': { redirect: '/composables/define-shortcuts', prerender: false },
+  },
+
   devServer: {
     port: 3211,
     cors: {
       origin: [
-        'http://localhost:3210',
+        'http://localhost:3211',
         'https://custom-origin.com',
       ],
     },
   },
-  // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
+  // https://nuxt.com/docs/guide/upgrade#testing-nuxt-4
   future: { compatibilityVersion: 4 },
 
   features: {
@@ -147,9 +207,32 @@ export default defineNuxtConfig({
     experimental: {
       openAPI: true,
     },
+
+    prerender: {
+      routes: [
+        '/guide',
+        '/api/countries.json',
+        '/api/locales.json',
+        // '/api/releases.json',
+        // '/api/pulls.json'
+      ],
+      crawlLinks: true,
+      autoSubfolderIndex: false,
+    },
+    cloudflare: {
+      pages: {
+        routes: {
+          exclude: [
+            '/components/*',
+            '/guide/*',
+            '/composables/*',
+          ],
+        },
+      },
+    },
   },
 
-  // https://hub.nuxt.com/docs/getting-started/installation#options
+  // https://hub.nuxt.com/docs/guide/installation#options
   hub: {
     ai: true,
     blob: true,
@@ -205,6 +288,36 @@ export default defineNuxtConfig({
       },
     ],
   },
+
+  // componentMeta: {
+  //   exclude: [
+  //     '@nuxt/content',
+  //     '@nuxt/icon',
+  //     '@nuxt/image',
+  //     '@nuxtjs/color-mode',
+  //     '@nuxtjs/plausible',
+  //     '@kgierke/nuxt-basic-auth',
+  //     'nuxt/dist',
+  //     'nuxt-og-image',
+  //     'nuxt-fathom',
+  //     '@formkit/auto-animate/nuxt',
+  //     '@vueuse/nuxt',
+  //     // '@nuxtjs/mdc',
+  //     // '@pinia/nuxt',
+  //     // '@pinia/colada-nuxt',
+  //     // 'nuxt-auth-utils',
+
+  //     resolve('./app/components'),
+  //     process.env.NUXT_UI_PRO_PATH ? resolve(process.env.NUXT_UI_PRO_PATH, 'docs', 'app', 'components') : '.c12',
+  //   ],
+  //   metaFields: {
+  //     type: false,
+  //     props: true,
+  //     slots: true,
+  //     events: true,
+  //     exposed: false,
+  //   },
+  // },
 
   // https://eslint.nuxt.com
   eslint: {

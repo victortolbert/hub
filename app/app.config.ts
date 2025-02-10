@@ -1,10 +1,19 @@
 export default defineAppConfig({
   // https://ui3.nuxt.dev/getting-started/theme#design-system
+  toaster: {
+    position: 'top-center' as const,
+    expand: true,
+    duration: 5000,
+  },
+  theme: {
+    radius: 0.25,
+    blackAsPrimary: false,
+  },
   ui: {
     colors: {
-      neutral: 'gray',
-      primary: 'gray',
-      secondary: 'stone',
+      primary: 'neutral',
+      neutral: 'neutral',
+      secondary: 'gray',
       tertiary: 'stone',
     },
     container: {

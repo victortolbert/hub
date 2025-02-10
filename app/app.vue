@@ -1,4 +1,189 @@
 <script setup>
+// import type { ContentNavigationItem } from '@nuxt/content'
+// const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+// const navigation = ref([
+//   [
+//     {
+//       label: 'Components',
+//       type: 'label',
+//     },
+//     {
+//       label: 'Tokens',
+//       icon: 'i-ph-tag-duotone',
+//       description: 'A set of design tokens for UI consistency.',
+//       children: [
+//         {
+//           label: 'Color',
+//           icon: 'i-ph-palette-duotone',
+//           to: '/button',
+//           description: 'A color token selector for consistent UI colors.',
+//         },
+//         {
+//           label: 'Spacing',
+//           icon: 'i-ph-ruler-duotone',
+//           to: '/callout',
+//           description: 'Guidelines for spacing and layout.',
+//         },
+//         {
+//           label: 'Typography',
+//           icon: 'i-ph-text-t-duotone',
+//           to: '/tabs-header',
+//           description: 'Typography tokens for fonts and sizes.',
+//         },
+//       ],
+//     },
+//     {
+//       label: 'Elements',
+//       icon: 'i-ph-stack-duotone',
+//       description: 'Basic UI elements for building interfaces.',
+//       defaultOpen: true,
+//       children: [
+//         {
+//           label: 'Button',
+//           icon: 'i-ph-hand-pointing-duotone',
+//           to: '/button',
+//           description: 'A clickable button element.',
+//         },
+//         {
+//           label: 'Callout',
+//           icon: 'i-ph-megaphone-simple-duotone',
+//           to: '/callout',
+//           description: 'A callout box for highlighting information.',
+//         },
+//         {
+//           label: 'Card',
+//           icon: 'i-ph-credit-card-duotone',
+//           to: '/card',
+//           description: 'A card layout component for displaying content.',
+//         },
+//         {
+//           label: 'Carousel',
+//           icon: 'i-ph-circles-four-duotone',
+//           to: '/carousel',
+//         },
+//         {
+//           label: 'Container',
+//           icon: 'i-ph-square-duotone',
+//           to: '/container',
+//           description: 'A container element for grouping sections.',
+//         },
+//         {
+//           label: 'Columns',
+//           icon: 'i-ph-columns-duotone',
+//           to: '/columns',
+//           description: '',
+//         },
+//         {
+//           label: 'Formulary',
+//           icon: 'i-ph-list-duotone',
+//           to: '/formulary',
+//           description: 'A form component to gather user inputs.',
+//         },
+//         {
+//           label: 'Image',
+//           icon: '',
+//           to: '/image',
+//           description: '',
+//         },
+//         {
+//           label: 'Media Object',
+//           icon: 'i-ph-film-reel-duotone',
+//           to: '/media-object',
+//           description: 'A media object for displaying images or videos.',
+//         },
+//         {
+//           label: 'Modal',
+//           icon: 'i-ph-app-window-duotone',
+//           to: '/modal',
+//           description: 'A modal dialog for temporary interactions.',
+//         },
+//         {
+//           label: 'Navigation',
+//           icon: 'i-ph-compass-duotone',
+//           to: '/navigation',
+//           description: 'A navigation component for site menus.',
+//         },
+//         {
+//           label: 'Safety Bar',
+//           icon: 'i-ph-shield-duotone',
+//           to: '/safety-bar',
+//           description: 'A safety bar for alerts or warnings.',
+//         },
+//         {
+//           label: 'Tabs Header',
+//           icon: 'i-ph-tabs-duotone',
+//           to: '/tabs-header',
+//           description: 'A tabbed interface component.',
+//         },
+//         {
+//           label: 'Table',
+//           icon: 'i-ph-table-duotone',
+//           to: '/table',
+//           description: 'A table component for displaying data.',
+//         },
+//         {
+//           label: 'Text',
+//           icon: 'i-ph-text-duotone',
+//           to: '/text',
+//           description: 'A text component for rich content.',
+//         },
+//       ],
+//     },
+//     {
+//       label: 'Patterns',
+//       icon: 'i-ph-grid-four-duotone',
+//       description: 'Predefined layout patterns to speed up design.',
+//       children: [
+//         {
+//           label: 'Placeholder',
+//           icon: 'i-ph-file-duotone',
+//           to: '/examples/image/placeholder',
+//           description: 'A placeholder component for temporary content.',
+//         },
+//       ],
+//     },
+//     {
+//       label: 'Templates',
+//       icon: 'i-ph-layout-duotone',
+//       description: 'A collection of ready-to-use page templates.',
+//       children: [
+//         {
+//           label: 'Calendar',
+//           icon: 'i-ph-calendar-duotone',
+//           to: '/examples/templates/calendar',
+//           description: 'A calendar component for managing and displaying dates.',
+//         },
+//       ],
+//     },
+//     {
+//       label: 'Examples',
+//       icon: '',
+//       description: '',
+//       children: [
+//         {
+//           label: 'Compare',
+//           icon: 'i-ph-arrows-left-right-duotone',
+//           to: '/examples/image/compare',
+//           description: 'A component to compare visual elements side-by-side.',
+//         },
+//         {
+//           label: 'Gallery',
+//           icon: 'i-ph-image-duotone',
+//           to: '/examples/image-gallery',
+//           description: 'A gallery layout for showcasing multiple images.',
+//         },
+//         {
+//           label: 'Generator',
+//           icon: 'i-ph-magic-wand-duotone',
+//           to: '/examples/image/generator',
+//           description: 'An image generator for creating dynamic visuals.',
+//         },
+//       ],
+//     },
+//   ],
+// ])
+// Modern, Beautiful, Awesome, Better
+const { menu } = useUiStore()
 const { getImages } = useFile()
 
 const title = 'Hub'
@@ -18,160 +203,38 @@ await getImages()
 </script>
 
 <template>
-  <UApp :toaster="{ position: 'top-center', duration: 300 }" data-component="App" class="w-full before:content-[attr(data-component)]">
-    <div
-      class="bg-black min-h-[100dvh] overflow-x-auto relative"
-      :class="{
-        'flex flex-col md:block': $router.currentRoute.value.fullPath !== '/examples/image/gallery',
-      }"
-    >
-      <NuxtRouteAnnouncer />
-
-      <NuxtLoadingIndicator />
-
-      <div>
-        <NuxtPage />
-
-        <!-- <ImageThumbnailList
-          :class="$router.currentRoute.value.fullPath !== '/examples/image/gallery'
-            ? 'opacity-100 z-[9999]'
-            : 'opacity-0 z-[-1]'"
-        /> -->
+  <u-app class="w-full">
+    <nuxt-layout>
+      <div
+        class="min-h-[100dvh] overflow-x-auto relative"
+        :class="{
+          'flex flex-col md:block': $router.currentRoute.value.fullPath !== '/examples/image-gallery',
+        }"
+      >
+        <nuxt-route-announcer />
+        <nuxt-loading-indicator />
+        <div class="flex w-full gap-16">
+          <!-- <aside class="fixed min-w-64 border-r border-[var(--ui-border)]">
+            <u-content-navigation :navigation="navigation" highlight />
+            <u-navigation-menu
+              highlight
+              color="neutral"
+              orientation="vertical"
+              :items="menu.items"
+              class="data-[orientation=horizontal]:border-b border-[var(--ui-border)] data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-48"
+            />
+            <color-mode-button />
+          </aside> -->
+          <main class="flex-1">
+            <nuxt-page />
+          </main>
+          <!-- <ImageThumbnailList
+            :class="$router.currentRoute.value.fullPath !== '/examples/image-gallery'
+              ? 'opacity-100 z-[9999]'
+              : 'opacity-0 z-[-1]'"
+          /> -->
+        </div>
       </div>
-    </div>
-  </UApp>
+    </nuxt-layout>
+  </u-app>
 </template>
-
-<style>
-html {
-  scrollbar-gutter: stable;
-  scrollbar-gutter: stable both-edges;
-}
-
-html {
-  overflow-y: scroll;
-  scrollbar-gutter: stable;
-}
-
-#__nuxt {
-  height: 100vh;
-}
-
-.layout-enter-active,
-.layout-leave-active {
-  transition: all 0.4s;
-}
-.layout-enter-from,
-.layout-leave-to {
-  filter: grayscale(1);
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.2s;
-}
-
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(-5px);
-}
-
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(5px);
-}
-
-.rotate-enter-active,
-.rotate-leave-active {
-  transition: all 0.4s;
-}
-.rotate-enter-from,
-.rotate-leave-to {
-  opacity: 0;
-  transform: rotate3d(1, 1, 1, 15deg);
-}
-
-.slide-left-enter-active,
-.slide-left-leave-active,
-.slide-right-enter-active,
-.slide-right-leave-active {
-  transition: all 0.2s;
-}
-.slide-left-enter-from {
-  opacity: 0;
-  transform: translate(50px, 0);
-}
-.slide-left-leave-to {
-  opacity: 0;
-  transform: translate(-50px, 0);
-}
-.slide-right-enter-from {
-  opacity: 0;
-  transform: translate(-50px, 0);
-}
-.slide-right-leave-to {
-  opacity: 0;
-  transform: translate(50px, 0);
-}
-.animate-text-slide {
-  animation: text-slide 15s cubic-bezier(0.83, 0, 0.17, 1) infinite;
-}
-
-@keyframes text-slide {
-  0%,
-  100% {
-    transform: translateY(0%);
-  }
-
-  16% {
-    transform: translateY(-16.66%);
-  }
-
-  32% {
-    transform: translateY(-33.33%);
-  }
-
-  48% {
-    transform: translateY(-50%);
-  }
-
-  64% {
-    transform: translateY(-66.66%);
-  }
-
-  80% {
-    transform: translateY(-83.33%);
-  }
-}
-
-.is-invalid {
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-
-.swing {
-  transition: all 0.75s ease;
-}
-
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-</style>

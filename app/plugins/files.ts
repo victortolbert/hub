@@ -15,7 +15,7 @@ export default defineNuxtPlugin(() => {
 
   async function uploadImage(image: File, filter: boolean = false) {
     await upload(image).catch(err => toast.add({
-      color: 'red',
+      color: 'error',
       title: 'Failed to upload image',
       description: err.data?.message || err.message,
     }))

@@ -1,3 +1,6 @@
+// import animate from 'tailwindcss-animate'
+// import { setupInspiraUI } from '@inspira-ui/plugins'
+
 // import typography from '@tailwindcss/typography'
 // import { em } from './app/utils/em.js'
 
@@ -5,11 +8,53 @@
 export default {
   theme: {
     extend: {
+      // colors: {
+      //   border: 'hsl(var(--border))',
+      //   input: 'hsl(var(--input))',
+      //   ring: 'hsl(var(--ring))',
+      //   background: 'hsl(var(--background))',
+      //   foreground: 'hsl(var(--foreground))',
+      //   primary: {
+      //     DEFAULT: 'hsl(var(--primary))',
+      //     foreground: 'hsl(var(--primary-foreground))',
+      //   },
+      //   secondary: {
+      //     DEFAULT: 'hsl(var(--secondary))',
+      //     foreground: 'hsl(var(--secondary-foreground))',
+      //   },
+      //   destructive: {
+      //     DEFAULT: 'hsl(var(--destructive))',
+      //     foreground: 'hsl(var(--destructive-foreground))',
+      //   },
+      //   muted: {
+      //     DEFAULT: 'hsl(var(--muted))',
+      //     foreground: 'hsl(var(--muted-foreground))',
+      //   },
+      //   accent: {
+      //     DEFAULT: 'hsl(var(--accent))',
+      //     foreground: 'hsl(var(--accent-foreground))',
+      //   },
+      //   popover: {
+      //     DEFAULT: 'hsl(var(--popover))',
+      //     foreground: 'hsl(var(--popover-foreground))',
+      //   },
+      //   card: {
+      //     DEFAULT: 'hsl(var(--card))',
+      //     foreground: 'hsl(var(--card-foreground))',
+      //   },
+      // },
+      // borderRadius: {
+      //   xl: 'calc(var(--radius) + 4px)',
+      //   lg: 'var(--radius)',
+      //   md: 'calc(var(--radius) - 2px)',
+      //   sm: 'calc(var(--radius) - 4px)',
+      // },
       backgroundImage: {
         'skyrizi-derm-overview': 'url("/content/dam/skyrizihcpivy/isa/template-assets/skyrizi-derm-background-overview.jpg")',
         'skyrizi-derm': 'url("/content/dam/skyrizihcpivy/isa/template-assets/skyrizi-derm-background.jpg")',
         'preview': 'url("/resources/images/preview-background.jpg")',
         'product': 'url("/resources/images/product-background.jpg")',
+        'grid-overlay': 'url("/resources/images/backgrounds/grid-overlay.svg")',
       },
       strokeWidth: {
         2: '2px',
@@ -99,6 +144,8 @@ export default {
     },
   },
   plugins: [
+    // animate,
+    // setupInspiraUI,
     // typography(),
     // function ({ addComponents, theme }) {
     //   const screens = theme('screens')

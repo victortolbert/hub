@@ -1,0 +1,10 @@
+{
+  "name": "Export Text Nodes",
+  "id": "export-text-nodes-plugin",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": [
+    "figma"
+  ]
+}
