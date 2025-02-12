@@ -9,7 +9,6 @@ const { resolve } = createResolver(import.meta.url)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   // https://nuxt.com/modules
   modules: [
     '@nuxt/ui-pro',
@@ -250,6 +249,7 @@ export default defineNuxtConfig({
   },
 
   telemetry: false,
+  debug: true,
 
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)

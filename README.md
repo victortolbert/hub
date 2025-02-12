@@ -6,10 +6,11 @@
 
 ## Components
 
-| Component     |
-| ------------- |
-| Placeholder   |
-| Image Compare |
+| Component     |     |
+| ------------- | --- |
+| Placeholder   |     |
+| Image Compare |     |
+| Image Gallery |     |
 
 ----
 
@@ -45,4 +46,3 @@ https://github.com/settings/developers
 https://github.com/settings/personal-access-tokens
 https://github.com/settings/tokens
 https://github.com/settings/applications/new
-

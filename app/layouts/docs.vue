@@ -26,12 +26,14 @@ const { menu } = useUiStore()
                 },
                 {
                   label: 'Jira Issues',
-                  icon: 'i-lucide-book-open',
+                  icon: 'i-logos-jira',
                   to: '/issues',
                 },
               ]"
               class="data-[orientation=horizontal]:border-b border-[var(--ui-border)] data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-48"
             />
+
+            <navbar />
             <color-mode-button />
           <!-- </aside> -->
 

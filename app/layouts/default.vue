@@ -7,7 +7,43 @@
 
 <style>
 :root {
+  --ui-primary: black;
+
+  --ui-text: var(--ui-color-neutral-900);
+  --ui-bg: var(--ui-color-neutral-50);
+
   --ui-container: var(--container-7xl);
+  --ui-radius: var(--radius-sm);
+
+  /* --ui-container: var(--container-5xl); */
+  /* --ui-radius: var(--radius-sm); */
+
+  /* --ui-text-dimmed: var(--ui-color-neutral-400); */
+  /* --ui-text-muted: var(--ui-color-neutral-500); */
+  /* --ui-text-toned: var(--ui-color-neutral-600); */
+  /* --ui-text: var(--ui-color-neutral-700); */
+  /* --ui-text-highlighted: var(--ui-color-neutral-900); */
+
+  /* --ui-bg: var(--color-white); */
+  /* --ui-bg-muted: var(--ui-color-neutral-50); */
+  /* --ui-bg-elevated: var(--ui-color-neutral-100); */
+  /* --ui-bg-accented: var(--ui-color-neutral-200); */
+  /* --ui-bg-inverted: var(--ui-color-neutral-900); */
+
+  /* --ui-border: var(--ui-color-neutral-200); */
+  /* --ui-border-muted: var(--ui-color-neutral-200); */
+  /* --ui-border-accented: var(--ui-color-neutral-300); */
+  /* --ui-border-inverted: var(--ui-color-neutral-900); */
+}
+
+.dark {
+  --ui-primary: white;
+  --ui-bg: var(--ui-color-neutral-950);
+  /* --ui-border: var(--ui-color-neutral-900); */
+}
+
+:root {
+
   --brand-color: #006;
   /* --default-font-family: 'Avenir Condensed', 'Avenir Next Condensed', sans-serif; */
 
@@ -21,6 +57,9 @@
   --space-8: 32px;
   --space-9: 64px;
   --space-10: 72px;
+
+  --radius: 4px;
+
   --radius-0: 2px;
   --radius-1: 4px;
   --radius-2: 6px;
@@ -128,26 +167,6 @@
   --shiki-ansi-bright-cyan-dim: #55ffff80;
   --shiki-ansi-bright-white: #ffffff;
   --shiki-ansi-bright-white-dim: #ffffff80;
-
-  /* --ui-container: var(--container-5xl); */
-  /* --ui-radius: var(--radius-sm); */
-
-  /* --ui-text-dimmed: var(--ui-color-neutral-400); */
-  /* --ui-text-muted: var(--ui-color-neutral-500); */
-  /* --ui-text-toned: var(--ui-color-neutral-600); */
-  /* --ui-text: var(--ui-color-neutral-700); */
-  /* --ui-text-highlighted: var(--ui-color-neutral-900); */
-
-  /* --ui-bg: var(--color-white); */
-  /* --ui-bg-muted: var(--ui-color-neutral-50); */
-  /* --ui-bg-elevated: var(--ui-color-neutral-100); */
-  /* --ui-bg-accented: var(--ui-color-neutral-200); */
-  /* --ui-bg-inverted: var(--ui-color-neutral-900); */
-
-  /* --ui-border: var(--ui-color-neutral-200); */
-  /* --ui-border-muted: var(--ui-color-neutral-200); */
-  /* --ui-border-accented: var(--ui-color-neutral-300); */
-  /* --ui-border-inverted: var(--ui-color-neutral-900); */
 }
 
 html {
