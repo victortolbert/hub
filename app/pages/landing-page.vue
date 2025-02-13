@@ -11,7 +11,7 @@
     <!-- Main Header -->
     <header class="site-header" role="banner">
       <a href="/" class="logo" aria-label="Aceternity UI Home">
-        <img src="/api/placeholder/120/40" alt="Aceternity UI Logo">
+        <img src="https://dummyimage.com/120x40/E8117F/FFFFFF" alt="Aceternity UI Logo">
       </a>
       <nav role="navigation" aria-label="Main navigation">
         <ul class="primary-nav">
@@ -53,10 +53,10 @@
             <a href="/custom" class="button button-secondary">Custom Components</a>
           </div>
           <div class="tech-stack" aria-label="Technology stack">
-            <img src="/api/placeholder/24/24" alt="Next.js">
-            <img src="/api/placeholder/24/24" alt="React">
-            <img src="/api/placeholder/24/24" alt="TailwindCSS">
-            <img src="/api/placeholder/24/24" alt="Framer Motion">
+            <img src="https://dummyimage.com/24x24" alt="Next.js">
+            <img src="https://dummyimage.com/24x24" alt="React">
+            <img src="https://dummyimage.com/24x24" alt="TailwindCSS">
+            <img src="https://dummyimage.com/24x24" alt="Framer Motion">
           </div>
         </div>
         <div class="hero-preview">
