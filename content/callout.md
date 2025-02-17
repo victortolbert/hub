@@ -8,16 +8,24 @@ date: 2025-02-04
 
 ::code-group
 
-```bash [pnpm]
-pnpm add @nuxt/ui-pro@next
+```html [callout.html]
+<div class="callout">
+</div>
 ```
 
-```bash [yarn]
-yarn add @nuxt/ui-pro@next
+```css [callout.css]
+.callout {}
 ```
 
-```bash [npm]
-npm install @nuxt/ui-pro@next
+```vue [callout.vue]
+<template>
+  <div class="callout">
+  </div>
+</template>
+
+<style>
+.callout {}
+</style>
 ```
 
 ```bash [bun]
@@ -25,7 +33,6 @@ bun add @nuxt/ui-pro@next
 ```
 
 ::
-
 
 ## Properties
 
